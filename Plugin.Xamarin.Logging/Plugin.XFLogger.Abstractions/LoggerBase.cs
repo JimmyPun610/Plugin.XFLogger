@@ -168,7 +168,7 @@ namespace Plugin.XFLogger.Abstractions
         /// Get local storage path
         /// </summary>
         /// <returns></returns>
-        public virtual string GetAll()
+        public virtual string GetAll(bool inDescendingOrder = true)
         {
             string log = "";
             return log;

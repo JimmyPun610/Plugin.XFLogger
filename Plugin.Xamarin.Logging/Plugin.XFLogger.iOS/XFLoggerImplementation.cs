@@ -1,6 +1,9 @@
 using Plugin.XFLogger.Abstractions;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text;
 
 namespace Plugin.XFLogger
 {
@@ -59,16 +62,33 @@ namespace Plugin.XFLogger
         /// <summary>
         /// Get log
         /// </summary>
+        /// <param name="inDescendingOrder">Indicator the log display order. Descending Order will need more times</param>
         /// <returns></returns>
-        public override string GetAll()
+        public override string GetAll(bool inDescendingOrder = true)
         {
             string log = "";
             string logFileName = GetLogFileName();
             string localStoragePath = GetLocalStoragePath();
             string logFilePath = Path.Combine(localStoragePath, logFileName);
             if (File.Exists(logFilePath)) log = File.ReadAllText(logFilePath);
+            if (inDescendingOrder)
+                log = reverseLog(log);
             return log;
         }
+
+        private string reverseLog(string logContent)
+        {
+            List<string> logs = logContent.Split(new string[] { System.Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            logs.Reverse();
+            StringBuilder str = new StringBuilder();
+            logs.ForEach(s =>
+            {
+                str.AppendLine(s);
+            });
+            return str.ToString();
+        }
+
+
         /// <summary>
         /// Purge log
         /// </summary>

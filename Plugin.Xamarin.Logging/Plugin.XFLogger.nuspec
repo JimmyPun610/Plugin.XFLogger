@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Plugin.XFLogger</id>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <title>Plugin.XFLogger</title>
     <authors>Jimmy Pun</authors>
     <owners>Jimmy Pun</owners>
@@ -11,7 +11,9 @@
     <iconUrl>https://banner2.kisspng.com/20180713/olo/kisspng-nuget-net-framework-package-manager-software-repo-nuget-5b487dc3ba81a7.452233091531477443764.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This is a library which doing logging feature in Xamarin Forms(iOS and Android only)</description>
-    <releaseNotes>1.0 : First version. Please visit github for user guide</releaseNotes>
+    <releaseNotes>
+		1.0.1 : Add reverse log in get log function
+	</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>Xamarin.Forms Log Plugin.XFLogger Plugin</tags>
   </metadata>

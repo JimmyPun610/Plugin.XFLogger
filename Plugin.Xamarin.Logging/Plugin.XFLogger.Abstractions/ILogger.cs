@@ -106,7 +106,7 @@ namespace Plugin.XFLogger.Abstractions
         /// Get log
         /// </summary>
         /// <returns></returns>
-        string GetAll();
+        string GetAll(bool inDescendingOrder);
         /// <summary>
         /// Purge log
         /// </summary>
