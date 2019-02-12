@@ -1,5 +1,5 @@
 # Plugin.XFLogger
-Logging library for xamarin forms
+Logging library for xamarin forms, work for iOS and Android
 
 Nuget Url : 
 https://www.nuget.org/packages/Plugin.XFLogger/1.0.1
@@ -10,10 +10,7 @@ Configuration
 In MainActiviy.cs (Android)
 ```C#
 base.OnCreate(savedInstanceState);
-.....
-
 Plugin.XFLogger.CrossXFLogger.Current.Configure(Plugin.XFLogger.Abstractions.LogTimeOption.DateTimeNow, "applicationLog.log", 3, 1024, Plugin.XFLogger.Abstractions.LogLevel.Info, true);
-......
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
 ```
