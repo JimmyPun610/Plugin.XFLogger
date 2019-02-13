@@ -71,7 +71,7 @@ namespace Plugin.XFLogger.Abstractions
             }
             else
             {
-                formattedMessage = String.Format("{0} {1} {2} {3} EXCEPTION: {4} STACK TRACE: {5}", logLevel.ToString(), logTime, tag, message, exception.Message, exception.StackTrace.ToString());
+                formattedMessage = String.Format("{0} {1} {2} {3} EXCEPTION: {4} STACK TRACE: {5}", logLevel.ToString(), logTime, tag, message, exception?.Message, exception?.StackTrace?.ToString());
             }
             formattedMessage += Environment.NewLine;
             return formattedMessage;
