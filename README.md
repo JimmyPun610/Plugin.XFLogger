@@ -2,9 +2,9 @@
 Logging library for xamarin forms, work for iOS and Android
 
 Nuget Url : 
-https://www.nuget.org/packages/Plugin.XFLogger/1.0.1
+https://www.nuget.org/packages/Plugin.XFLogger/
 ```
-Install-Package Plugin.XFLogger -Version 1.0.1
+Install-Package Plugin.XFLogger
 ```
 Configuration
 In MainActiviy.cs (Android)
